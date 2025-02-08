@@ -1,0 +1,23 @@
+/* Common styles for JEE, NEET, and Board Exam sections */
+.features-section {
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 2rem;
+    margin: 4rem 0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Copy all the feature card, metrics, and animation styles from BoardExamPreparation.css */
+/* ... */ 

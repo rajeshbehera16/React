@@ -1,0 +1,349 @@
+/* Main Layout */
+.scholarship-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+/* Navigation */
+.scholarship-nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff, #e0e7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.scholarship-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+/* Search Section */
+.search-section {
+    background: white;
+    padding: 2rem;
+    margin-top: -2rem;
+    border-radius: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.fancy-select,
+.search-input {
+    padding: 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Scholarships Grid */
+.scholarships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.scholarship-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.scholarship-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.scholarship-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+    margin: 1rem 0;
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.step-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.apply-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.apply-button.animated {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.apply-button.animated:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.button-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.button-text {
+    transition: transform 0.3s ease;
+}
+
+.button-icon {
+    transition: transform 0.3s ease;
+}
+
+.apply-button:hover .button-text {
+    transform: translateX(-4px);
+}
+
+.apply-button:hover .button-icon {
+    transform: translateX(4px);
+}
+
+.button-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.apply-button:hover .button-glow {
+    opacity: 0.15;
+    animation: glowPulse 2s infinite;
+}
+
+.button-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.apply-button:hover .particle:nth-child(1) {
+    width: 8px;
+    height: 8px;
+    top: 20%;
+    left: 20%;
+    animation: particleFloat 1.2s ease-in-out infinite;
+}
+
+.apply-button:hover .particle:nth-child(2) {
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    animation: particleFloat 1.8s ease-in-out infinite 0.2s;
+}
+
+.apply-button:hover .particle:nth-child(3) {
+    width: 4px;
+    height: 4px;
+    top: 30%;
+    left: 80%;
+    animation: particleFloat 1.5s ease-in-out infinite 0.4s;
+}
+
+@keyframes glowPulse {
+    0%, 100% { transform: scale(1); opacity: 0.15; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(
+            calc(var(--x, 1) * 20px),
+            calc(var(--y, -1) * 20px)
+        );
+        opacity: 0;
+    }
+}
+
+/* Add active state for button press */
+.apply-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+}
+
+/* Add loading state styles */
+.apply-button.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.apply-button.loading .button-content {
+    visibility: hidden;
+}
+
+.apply-button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: buttonLoader 0.8s linear infinite;
+}
+
+@keyframes buttonLoader {
+    to { transform: rotate(360deg); }
+}
+
+/* Help Button */
+.help-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .scholarship-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .scholarships-grid,
+    .process-steps {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+} 

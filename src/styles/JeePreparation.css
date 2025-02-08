@@ -1,0 +1,332 @@
+/* Enhanced JEE Page Styles */
+.jee-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Enhanced Navigation */
+.jee-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 
+        0 4px 24px rgba(0, 0, 0, 0.03),
+        0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+}
+
+/* Enhanced Hero Section */
+.jee-hero {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.jee-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.1"/></svg>') center/50px 50px;
+    opacity: 0.1;
+}
+
+.jee-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jee-hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Enhanced Metrics */
+.success-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.metric {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    min-width: 200px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.metric:hover {
+    transform: translateY(-5px);
+}
+
+.metric-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, #fff, #e0e7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.metric-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Enhanced Course Structure */
+.course-structure {
+    padding: 5rem 2rem;
+}
+
+.course-structure h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.structure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.structure-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 4px 24px rgba(0, 0, 0, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.structure-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.structure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.structure-card:hover::before {
+    opacity: 1;
+}
+
+.structure-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.structure-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.structure-card li {
+    padding: 0.75rem 0;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.structure-card li::before {
+    content: '→';
+    color: #6366f1;
+    font-weight: bold;
+}
+
+/* Add these new styles for enhanced interactivity */
+.access-btn {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.access-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: translateX(-100%) rotate(45deg);
+    animation: buttonShine 3s infinite;
+}
+
+@keyframes buttonShine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    20%, 100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .jee-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .success-metrics {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .metric {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .structure-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-color: rgba(79, 70, 229, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #4f46e5;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.resource-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.enrollment-section {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.enroll-button, .demo-button {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.enroll-button {
+    background: white;
+    color: #4f46e5;
+}
+
+.demo-button {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* Add more styles as needed */
+
+/* Keep specific JEE styles and import shared styles */
+@import './SharedComponents.css';
+
+/* Add more JEE-specific styles */ 
