@@ -9,4 +9,11 @@ module.exports = defineConfig({
       external: ['react-router-dom']
     }
   }
-});
+}
+                              export default {
+  build: {
+    rollupOptions: {
+      external: ['react-router-dom']
+    }
+  }
+};
