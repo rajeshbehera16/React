@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { HashRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import StudyMaterials from './components/StudyMaterials';
 import ByjusAnswers from './components/ByjusAnswers';
 import ScholarshipBTC from './components/ScholarshipBTC';
