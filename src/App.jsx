@@ -1219,7 +1219,7 @@ function MainContent() {
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/study-materials" element={<StudyMaterials />} />
@@ -1239,7 +1239,7 @@ export default function App() {
         <Route path="/interactive-learning" element={<InteractiveLearning />} />
         <Route path="/services" element={<ServicesPage />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
